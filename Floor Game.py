@@ -15,12 +15,12 @@ while (a < floors):
         point += escalator
         escalator += 2
     elif (ascend == 3):
-        for i in range (1,floors,1):
+        for i in range (1,floors):
             if (stair % i == 0):
-                pcount += 1                
-            if (pcount == 1):
-                stair = i 
-        point += stair   
+                pcount += 1
+                i += 1
+            if (pcount > 1):                
+                pcount += 1         
     else:
         print("Your choices are '1' for elevator, '2' for escalator and '3' for stair.")
     a += 1
